@@ -1,6 +1,6 @@
-const binarySearch = require("./binary");
+const linearSearch = require("../src/linear");
 
-describe("Binary Search", () => {
+describe("Linear Search", () => {
   let dataList;
 
   beforeEach(() => {
@@ -10,10 +10,10 @@ describe("Binary Search", () => {
   });
 
   it("should be match", () => {
-    expect(binarySearch(dataList, 10)).toBe(9);
+    expect(linearSearch(dataList, 10)).toBe(9);
   });
 
   it("is not exists on array", () => {
-    expect(binarySearch(dataList, 21)).toBe(-1);
+    expect(linearSearch(dataList, 21)).toBe(-1);
   });
 });
